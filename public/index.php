@@ -4,19 +4,25 @@
 	
 	session_start();
 
+	$_SESSION['loggedin'] = 0;
+
 	if ($_SESSION['loggedin'] == 1) {
 
 		// Logged In
-		echo "You are logged in."; die;
+		echo "You are logged in.";
 
 	} else {
 
 		// Not Logged In
-		echo "You are not logged in.";
+		$content = file_get_contents("../templates/loginform.html");
+		echo $content;
 
 		$_SESSION['loggedin'] = 1;
 
 	}
+
+	// Kill the script for now
+	die;
 
 	if ($_SERVER['REQUEST_URI'] != '/') {
 		
