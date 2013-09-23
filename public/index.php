@@ -13,6 +13,19 @@
 
 	} else {
 
+		if ($_POST['submit'] == 'Submit') {
+			if ($_POST['username'] == 'Carl' && $_POST['password'] == '123') {
+				echo "Logged in!";
+				$_SESSION['loggedin'] = 1;
+			} else {
+				echo "Login failed!";
+				$_SESSION['loggedin'] = 0;
+			}
+			// They submitted the login form
+		} else {
+
+		}
+
 		// Not Logged In
 		$content = file_get_contents("../templates/loginform.html");
 		echo $content;
