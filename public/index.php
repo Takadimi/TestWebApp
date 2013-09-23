@@ -8,10 +8,16 @@
 		
 		$content = file_get_contents("../templates/index.html");
 
-		if ($pmatches[1] == 'FuckFace') {
-			$content = str_replace('{text}', 'Go Away, '.$pmatches[1], $content);
-		} else {
-			$content = str_replace('{text}', 'Hello, '.$pmatches[1], $content);	
+		if ($pmatches[1] == 'Steven') {
+			$content = str_replace('{text}', 'Steven Tillman Rogers. Can you fucking believe his middle name is Tillman. Jesus Christ.', $content);
+		} else if ($pmatches[1] == 'Ronni') {
+			$content = str_replace('{text}', 'Ronni The Raddishist', $content);
+		} else if ($pmatches[1] == 'Jonathan') {
+                        $content = str_replace('{text}', '|m| Rock it off, 5 Aces! Rock it off! |m|', $content);
+		}else if ($pmatches[1] == 'Blake') {
+                        $content = str_replace('{text}', 'Great job, Blake! Way to go big guy!!!', $content);
+		 } else {
+			$content = str_replace('{text}', 'Fuck off, '.$pmatches[1], $content);	
 		}
 
 	echo $content;	
