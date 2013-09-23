@@ -2,7 +2,11 @@
     
 //	Controller
 	
-	session_start();
+	require_once("../classes/class.Authentication.php");
+	require_once("../classes/class.Session.php");
+
+	$Authentication = new TAuthentication();
+	$Session		= new TSession();
 
 	$_SESSION['loggedin'] = 0;
 
