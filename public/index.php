@@ -4,8 +4,6 @@
 	
 	session_start();
 
-	$_SESSION['loggedin'] = 0;
-
 	if ($_SESSION['loggedin'] == 1) {
 
 		// Logged In
