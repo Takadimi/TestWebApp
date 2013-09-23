@@ -1,6 +1,24 @@
 <?php
     
 //	Controller
+	
+	session_start();
+
+	$_SESSION['loggedin'] = 0;
+
+	if ($_SESSION['loggedin'] == 1) {
+
+		// Logged In
+		echo "You are logged in."; die;
+
+	} else {
+
+		// Not Logged In
+		echo "You are not logged in.";
+
+		$_SESSION['loggedin'] = 1;
+
+	}
 
 	if ($_SERVER['REQUEST_URI'] != '/') {
 		
