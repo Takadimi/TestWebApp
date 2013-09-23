@@ -15,7 +15,7 @@
 		} else if ($pmatches[1] == 'Jonathan') {
                         $content = str_replace('{text}', '|m| Rock it off, 5 Aces! Rock it off! |m|', $content);
 		}else if ($pmatches[1] == 'Blake') {
-                        $content = str_replace('{text}', 'Great job, Blake! Way to go big guy!!!', $content);
+                        $content = str_replace('{text}', 'Awesome job, Blake! Way to go big guy!!!', $content);
 		 } else {
 			$content = str_replace('{text}', 'Fuck off, '.$pmatches[1], $content);	
 		}
