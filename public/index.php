@@ -1,7 +1,7 @@
 <?php
-    
+
 //	Controller
-	
+
 	require_once("../classes/class.Authentication.php");
 	require_once("../classes/class.Session.php");
 
@@ -42,24 +42,25 @@
 	//die;
 
 	if ($_SERVER['REQUEST_URI'] != '/') {
-		
+
 		preg_match('!name/([a-z]+)!imsx', $_SERVER['REQUEST_URI'], $pmatches);
-		
+
 		$content = file_get_contents("../templates/index.html");
 
 		if ($pmatches[1] == 'Steven') {
 			$content = str_replace('{text}', 'Steven Tillman Rogers. Can you fucking believe his middle name is Tillman. Jesus Christ.', $content);
 		} else if ($pmatches[1] == 'Ronni') {
 			$content = str_replace('{text}', 'Ronni The Raddishist', $content);
+			$content = str_replace('#FF0000', '#80080');
 		} else if ($pmatches[1] == 'Jonathan') {
                         $content = str_replace('{text}', '|m| Rock it off, 5 Aces! Rock it off! |m|', $content);
-		}else if ($pmatches[1] == 'Blake') {
+		} else if ($pmatches[1] == 'Blake') {
                         $content = str_replace('{text}', 'Awesome job, Blake! Way to go big guy!!!', $content);
 		 } else {
-			$content = str_replace('{text}', 'Fuck off, '.$pmatches[1], $content);	
+			$content = str_replace('{text}', 'Fuck off, '.$pmatches[1], $content);
 		}
 
-	echo $content;	
+		echo $content;
 
 		// Homepage
 
