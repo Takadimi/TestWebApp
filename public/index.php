@@ -39,7 +39,7 @@
 	}
 
 	// Kill the script for now
-	die;
+	//die;
 
 	if ($_SERVER['REQUEST_URI'] != '/') {
 		
